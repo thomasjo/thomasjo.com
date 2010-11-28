@@ -1,7 +1,7 @@
 title: XMLDSIG in the .NET framework
 date: 04/08/2009
 
-I was recently given the task on one of my projects at work, to implement a new version of a digital signature solution that we use to get legally binding “signatures” from users. As part of the upgrade process, I had to implement support for [XMLDSIG](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/).
+I was recently given the task on one of my projects at work, to implement a new version of a digital signature solution that we use to get legally binding "signatures" from users. As part of the upgrade process, I had to implement support for [XMLDSIG](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/).
 
 To my great joy, I discovered that the .NET framework has supported XMLDSIG for years, but I quickly got into problems and all of the documentation I found online, including the official MSDN documentation covering the XMLDSIG support was either lacking or incorrect...
 
@@ -17,7 +17,7 @@ The signature can distributed in three different variants;
 The differences are rather subtle, but there are many transformations that can be applied to the document prior to signing, and only the right combinations provide valid signatures, and that is one of the problems I encountered with the [problematic MSDN documentation](http://msdn.microsoft.com/en-us/library/system.security.cryptography.xml.signedxml.aspx).
 
 ### Enveloping != Enveloped
-The problem with the MSDN documentation, and virtually every other example of doing XMLDSIG in .NET, is that they are only based around the “enveloped signature” variant, even when they tell you they are showing you an example of the “enveloping signature” variant. Either the authors of the examples have misunderstood the XMLDSIG specification, or have mistakenly used the word "enveloping", when they should have used "enveloped".
+The problem with the MSDN documentation, and virtually every other example of doing XMLDSIG in .NET, is that they are only based around the "enveloped signature" variant, even when they tell you they are showing you an example of the "enveloping signature" variant. Either the authors of the examples have misunderstood the XMLDSIG specification, or have mistakenly used the word "enveloping", when they should have used "enveloped".
 
 The problem is that, most, if not all, of the authors tell you they are showing you an example of the enveloping variant, they are instead using some freakish hybrid variant, and the only reason the sample actually works, is because they are combining the enveloped and enveloping variants. Any attempt to validate the signature without the context of the parent document, will fail.
 
@@ -119,7 +119,7 @@ One approach for generating valid enveloping signatures, is to utilize a differe
 
 I had to make another little adjustment to get everything to work correctly, and that was explicitly setting the canonicalization method. Changing the transform, also solved another problem I encountered; the inability to reference the object elements by URI ID, as the default behavior when using the enveloped variant is to look for elements matching the URI ID within the document being signed, instead of within the signature.
 
-<h3>But what if I want to use the “enveloped signature” variant?</h3>
+<h3>But what if I want to use the "enveloped signature" variant?</h3>
 If you don’t want the variant I needed (enveloping), then changing the code sample above to produce signatures of the enveloped kind, is trivial; 
 First make sure to remove the following two lines:
 
