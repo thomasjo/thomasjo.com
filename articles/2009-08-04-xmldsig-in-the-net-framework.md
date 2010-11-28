@@ -1,4 +1,3 @@
---- 
 title: XMLDSIG in the .NET framework
 date: 04/08/2009
 
