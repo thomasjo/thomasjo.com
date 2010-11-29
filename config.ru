@@ -9,6 +9,8 @@ if ENV['RACK_ENV'] == 'development'
   use Rack::ShowExceptions
 end
 
+Encoding.default_internal = Encoding::UTF_8
+
 #
 # Create and configure a toto instance
 #
