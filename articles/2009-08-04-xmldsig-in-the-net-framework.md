@@ -6,7 +6,7 @@ I was recently given the task on one of my projects at work, to implement a new 
 To my great joy, I discovered that the .NET framework has supported XMLDSIG for years, but I quickly got into problems and all of the documentation I found online, including the official MSDN documentation covering the XMLDSIG support was either lacking or incorrect...
 
 ### What is XMLDSIG?
-Before I get to the code, and the problems I encountered, I’ll briefly explain the concept of XMLDSIG; [XMLDSIG is an old standard](http://www.w3.org/Signature/Drafts/WD-xmldsig-core-20000114/) in Internet years, and is seemingly accepted as the best and easiest way of digitally signing XML documents.
+Before I get to the code, and the problems I encountered, I'll briefly explain the concept of XMLDSIG; [XMLDSIG is an old standard](http://www.w3.org/Signature/Drafts/WD-xmldsig-core-20000114/) in Internet years, and is seemingly accepted as the best and easiest way of digitally signing XML documents.
 
 The signature can distributed in three different variants;
 
