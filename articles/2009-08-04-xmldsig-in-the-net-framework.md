@@ -10,9 +10,9 @@ Before I get to the code, and the problems I encountered, I'll briefly explain t
 
 The signature can distributed in three different variants;
 
-* [Enveloped signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloped) – the signature is added to the document that was signed.
-* [Enveloping signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloping)  – the signature contains the document that was signed.
-* [Detached signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureDetached) – the signature is distributed separate from the document that was signed.
+* [Enveloped signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloped) -- the signature is added to the document that was signed.
+* [Enveloping signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloping) -- the signature contains the document that was signed.
+* [Detached signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureDetached) -- the signature is distributed separate from the document that was signed.
 
 The differences are rather subtle, but there are many transformations that can be applied to the document prior to signing, and only the right combinations provide valid signatures, and that is one of the problems I encountered with the [problematic MSDN documentation](http://msdn.microsoft.com/en-us/library/system.security.cryptography.xml.signedxml.aspx).
 
@@ -120,7 +120,7 @@ One approach for generating valid enveloping signatures, is to utilize a differe
 I had to make another little adjustment to get everything to work correctly, and that was explicitly setting the canonicalization method. Changing the transform, also solved another problem I encountered; the inability to reference the object elements by URI ID, as the default behavior when using the enveloped variant is to look for elements matching the URI ID within the document being signed, instead of within the signature.
 
 <h3>But what if I want to use the "enveloped signature" variant?</h3>
-If you don’t want the variant I needed (enveloping), then changing the code sample above to produce signatures of the enveloped kind, is trivial; 
+If you don't want the variant I needed (enveloping), then changing the code sample above to produce signatures of the enveloped kind, is trivial; 
 First make sure to remove the following two lines:
 
 <pre class="brush: csharp;">signedXml.AddObject(dataObject);
@@ -153,4 +153,3 @@ We also need to add an extra argument to the GetSignedDocument method, so that w
 }</pre>
 
 If you spot any errors, please let me know, so that there can exist at least one correct example of using XMLDSIG in the .NET framework.
-

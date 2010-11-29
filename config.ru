@@ -5,11 +5,14 @@ require 'haml'
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
 use Rack::CommonLogger
 
-#if ENV['RACK_ENV'] == 'development'
+if ENV['RACK_ENV'] == 'development'
   use Rack::ShowExceptions
-#end
+end
 
-Encoding.default_internal = Encoding::UTF_8
+# Set some sane encoding defaults...
+# Encoding.default_internal = Encoding::UTF_8
+Encoding.default_external = Encoding::US_ASCII
+
 
 #
 # Create and configure a toto instance
