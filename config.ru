@@ -11,7 +11,7 @@ end
 
 # Set some sane encoding defaults...
 # Encoding.default_internal = Encoding::UTF_8
-Encoding.default_external = Encoding::US_ASCII
+Encoding.default_external = Encoding::UTF_8
 
 
 #
