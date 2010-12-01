@@ -29,7 +29,7 @@ toto = Toto::Server.new do
   set :markdown,  :smart
   set :disqus,    false
   set :date,      lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
-  set :to_html,   lambda {|path, page, ctx| Haml::Engine.new(File.read("#{path}/#{page}.html.haml"), { :format => :html5 }).render(ctx) }
+  set :to_html,   lambda {|path, page, ctx| Haml::Engine.new(File.read("#{path}/#{page}.html.haml"), { :format => :html5, :ugly => true }).render(ctx) }
 
 
   # set :root,      "index"                                   # page to load on /
