@@ -1,11 +1,13 @@
 !!!
 %html
   %head
-    %link{ :rel => 'stylesheet',  :type => 'text/css', :href => '/css/main.css' }
-    %link{ :rel => 'alternate', :type => 'application/atom+xml', :title => "#{title} - Feed", :href => '/index.xml' }
-    %meta{ :'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8" }
     %title= if title != @config[:title]; "#{title} | #{@config[:title]}"; else; title; end
-
+    %meta{ :'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8" }
+    %link{ :rel => 'alternate', :type => 'application/atom+xml', :title => "#{title} - Feed", :href => '/index.xml' }
+    -# %link{ :rel => 'stylesheet',  :type => 'text/css', :href => '/css/main.css' }
+    %link{ :rel => 'stylesheet/less', :type => 'text/css', :href => '/css/main.less' }
+    %script{ :type => 'text/javascript', :src => '/js/less-1.0.40.min.js' }
+    
   %body
     %section
       = yield
