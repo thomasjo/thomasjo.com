@@ -19,12 +19,12 @@ signing XML documents.
 
 The signature can distributed in three different variants;
 
-* [Enveloped signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloped)
-  -- the signature is added to the document that was signed.
-* [Enveloping signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloping)
-  -- the signature contains the document that was signed.
-* [Detached signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureDetached)
-  -- the signature is distributed separate from the document that was signed.
+1. [Enveloped signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloped)
+   -- the signature is added to the document that was signed.
+2. [Enveloping signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureEnveloping)
+   -- the signature contains the document that was signed.
+3. [Detached signature](http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/#def-SignatureDetached)
+   -- the signature is distributed separate from the document that was signed.
 
 The differences are rather subtle, but there are many transformations that can be applied
 to the document prior to signing, and only the right combinations provide valid signatures,
