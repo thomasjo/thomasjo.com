@@ -1,6 +1,9 @@
-%h1= @path
-%ul
-  - if archives.length > 0
+%header
+  %h2
+    %a{ :href => '/archives/' } Archives
+
+%section
+  %ul
     - for entry in archives
       %li
         %a{ :href => entry.path }= entry.title

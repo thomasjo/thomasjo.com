@@ -12,7 +12,7 @@
     %script{ :type => 'text/javascript', :src => '/js/less.min.js' }
 
   %body
-    %header
+    %header#nav
       %h1
         %a{ :href => '/' }= @config[:title]
 
@@ -20,3 +20,4 @@
       = yield
 
   %footer
+    = "Copyright &copy; 2009-#{Time.now.year} #{@config[:author]}. All rights reserved."

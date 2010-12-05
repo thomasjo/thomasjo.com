@@ -4,48 +4,54 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}body{line-height:1;color:black;background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{text-align:left;font-weight:normal}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:""""}
 
 
+@theme-color: #e00;
+@theme-alternate-color: #555;
+@unimportant-color: #777;
+
+@header-font: 'Yanone Kaffeesatz', Arial, sans-serif;
+@separator: 1px dotted #ccc;
+
 html {
   margin: 20px;
 }
 
 body {
+  width: 778px;
   margin: 0 auto;
   padding: 15px 40px;
   font-family: 'Droid Serif', Georgia, Times, serif;
   font-size: 14px;
   line-height: 1.75;
-  width: 778px;
   color: #111;
 }
 
-header, section, article {
+section, header, article, footer {
   display: block;
 }
 
 h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+  font-family: @header-font;
 }
 
-h1, h2 {
-  font-size: 32px;
-}
+header#nav {
+  font-family: @header-font;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: @theme-alternate-color;
 
-header {
   h1 {
     display: inline-block;
-    font-size: 26px;
-    line-height: 1.3;
-    color: #444;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-    a:hover {
-      color: #e00;
-    }
   }
+  
+  a {
+    color: @theme-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: @theme-alternate-color;
+  }
+
 }
 
 #content {
@@ -54,28 +60,40 @@ header {
 
     h2 {
       display: inline-block;
+      font-size: 32px;
       line-height: 1.2;
 
       a, a:link, a:active, a:visited {
-        padding: 1px 3px;
-        background-color: #e00;
+        padding: 1px 3px 3px;
+        background-color: @theme-color;
         color: #fff;
         text-decoration: none;
       }
 
       a:hover {
-        background-color: #555;
+        background-color: @theme-alternate-color;
       }
     }
 
-    .date {
+    .metadata {
       display: block;
-      color: #777;
+      margin-top: 5px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: @unimportant-color;
     }
   }
+
+  article.post, section#archives {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: @separator;
+  }
   
-  article {
-    margin-bottom: 20px;
+  article.post:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
   }
 
   a {
@@ -119,3 +137,12 @@ header {
     list-style-type: circle;
   }
 }
+
+footer {
+  margin: 50px 0 30px;
+  padding-top: 50px;
+  border-top: @separator;
+  font-size: 12px;
+  color: @unimportant-color;
+}
+

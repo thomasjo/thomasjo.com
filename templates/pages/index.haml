@@ -1,13 +1,14 @@
 %section#articles
-  - for article in articles[0...3]
+  - for article in articles[0..3]
     %article.post
       %header
         %h2
           %a{ :href => article.path }= article.title
-        %span.date= article.date
+        %span.metadata= "#{article.date} — #{article.author}"
 
-      %section.content
+      %section.post-body
         = article.summary
-                
-%section#archives
-  = archives[3..-1]
+
+- if archives.length > 3
+  %section#archives
+    = archives[3..-1]

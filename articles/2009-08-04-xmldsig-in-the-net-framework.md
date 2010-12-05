@@ -1,5 +1,4 @@
 title: XMLDSIG in the .NET framework
-date: 04/08/2009
 
 
 I was recently given the task on one of my projects at work, to implement a new version of
