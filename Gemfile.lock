@@ -2,9 +2,11 @@ GEM
   remote: http://rubygems.org/
   specs:
     haml (3.0.24)
+    rack-rewrite (1.0.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   haml
+  rack-rewrite
