@@ -7,9 +7,11 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @theme-color: #e00;
 @theme-alternate-color: #555;
 @unimportant-color: #777;
+@link-color: #06c;
+@link-visited-color: #96c;
 
 @header-font: 'Yanone Kaffeesatz', Arial, sans-serif;
-@separator: 1px dotted #ccc;
+@separator: 1px dotted #bbb;
 
 html {
   margin: 20px;
@@ -51,7 +53,6 @@ header#nav {
   a:hover {
     color: @theme-alternate-color;
   }
-
 }
 
 #content {
@@ -74,31 +75,27 @@ header#nav {
       a:hover {
         background-color: @theme-alternate-color;
       }
+
+      a:after {
+        content: ' ';
+        position: absolute;
+        top: 100%;
+        left: 10px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-top-color: @theme-color;
+      }
+
+      a:hover:after {
+        border-top-color: @theme-alternate-color;
+      }
     }
 
-/*    
-    h2 a:after {
-      content: ' ';
-      height: 0;
-      position: absolute;
-      width: 0;
-      
-      border: 10px solid transparent;
-      border-top-color: @theme-color;
-      
-      top: 100%;
-      left: 10px;
-    }
-    
-    h2 a:hover:after {
-      border-top-color: @theme-alternate-color;
-    }
-*/
-    
     .metadata {
       display: block;
-      margin-top: 5px;
-      font-size: 12px;
+      margin-bottom: 5px;
+      font-size: 11px;
       text-transform: uppercase;
       color: @unimportant-color;
     }
@@ -116,7 +113,7 @@ header#nav {
       line-height: 1;
     }
   }
-  
+
   article.post:last-child {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -124,11 +121,17 @@ header#nav {
   }
 
   a {
-    color: #06c;
+    color: @link-color;
   }
 
   a:visited {
-    color: #96c;
+    color: @link-visited-color;
+  }
+
+  a.read-more {
+    display: block;
+    text-align: left;
+    color: @link-color;
   }
 
   h3 {
@@ -170,7 +173,8 @@ footer {
   margin: 50px 0 30px;
   padding-top: 50px;
   border-top: @separator;
-  font-size: 12px;
+  font-size: 11px;
   color: @unimportant-color;
+  text-transform: uppercase;
 }
 

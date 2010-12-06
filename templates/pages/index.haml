@@ -2,12 +2,13 @@
   - for article in articles[0..3]
     %article.post
       %header
+        %span.metadata= article.date
         %h2
           %a{ :href => article.path }= article.title
-        %span.metadata= "#{article.date} — #{article.author}"
 
       %section.post-body
         = article.summary
+        %a{ :href => article.path, :class => 'read-more' } Continue reading…
 
 - if archives.length > 3
   %section#archives

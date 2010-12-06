@@ -1,8 +1,8 @@
 %article.post
   %header
+    %span.metadata= date
     %h2
       %a{ :href => self.path }= title
-    %span.metadata= "#{date} — #{author}"
 
   %section.post-body
     = body
