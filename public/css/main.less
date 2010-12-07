@@ -74,6 +74,10 @@ header#nav {
 
       a:hover {
         background-color: @theme-alternate-color;
+
+        &:after {
+          border-top-color: @theme-alternate-color;
+        }
       }
 
       a:after {
@@ -85,10 +89,6 @@ header#nav {
         width: 0;
         border: 8px solid transparent;
         border-top-color: @theme-color;
-      }
-
-      a:hover:after {
-        border-top-color: @theme-alternate-color;
       }
     }
 
@@ -108,16 +108,16 @@ header#nav {
   }
 
   article.post {
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+
     section.feedback {
       margin-top: 40px;
       line-height: 1;
     }
-  }
-
-  article.post:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border: none;
   }
 
   a {
@@ -131,7 +131,6 @@ header#nav {
   a.read-more {
     display: block;
     text-align: left;
-    color: @link-color;
   }
 
   h3 {
