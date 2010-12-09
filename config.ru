@@ -25,7 +25,7 @@ Encoding.default_external = Encoding::UTF_8
 # -----------------------------------------
 use Rack::Rewrite do
   # Issue 301 for legacy URLs
-  r301 %r{^/blog/archive/(.*)$}, '/archives/$1'
+  r301 %r{^/blog/archive/(.*)$}, '/$1'
   r301 '/blog/archive/', '/archives/'
   r301 '/blog/', '/'
 end
