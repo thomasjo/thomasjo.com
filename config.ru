@@ -37,7 +37,7 @@ end
 # Create and configure a toto instance
 # -----------------------------------------
 toto = Toto::Server.new do
-  set :url,       'http://thomasjo.heroku.com/'
+  set :url,       'http://thomasjo.com/'
   set :author,    'Thomas Johansen'
   set :title,     'THOMASJO'
   set :ext,       'md'
