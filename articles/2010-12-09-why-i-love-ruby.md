@@ -5,16 +5,16 @@ I've been a fan of the Ruby language since I was first introduced to Ruby on Rai
 While I was learning both Rails and Ruby, it quickly became apparent that all the awesome-ness
 of the former would never have been possible without the latter; what makes Rails great is Ruby,
 and Ruby would almost certainly still be an obscure and under-appreciated language had it not
-been for Rails.~
+been for Rails. Ruby is a remarkably beautiful language, and I love working with it.~
 
 ### Freedom to hang ourselves
-To me, and more prominent people, like David Heinemeier Hansson, Ruby is very much about
+To me, and infinitely more prominent people like David Heinemeier Hansson, Ruby is very much about
 [freedom](http://tekpub.com/conferences/rubyconf2010/dhh). Freedom to shape the language to suit
 our purpose and fulfil our needs.
 Ruby will likely never feel old or outdated, because we are free to change it, to create our
 own versions of the language. The killer feature is that we can do this without needing to
 change the Ruby source and compiling a new version of the language -- we can do it from within
-our applications.
+our own frameworks and applications.
 
 This is the point where many die-hard supporters of statically typed, compiled languages
 usually stop and go "What? That cannot possibly be safe? How do you guarantee that X does what
@@ -25,7 +25,7 @@ Are you really willing to trade freedom for security? Even if that freedom meant
 create beautiful code and focus more solving the tasks at hand, as opposed to having
 "guaranteed" runtime behaviour, type safety etc?
 When was the last time static type checking saved your day? As DHH himself said in his keynote
-at [RubyConf 2010](http://www.rubyconf.org/) as a response to the of cited "Just enough rope to
+at [RubyConf 2010](http://www.rubyconf.org/) as a response to the oft cited "Just enough rope to
 hang yourself with" comment; "Should we outlaw rope, just because people can hang themselves
 with it?"
 
