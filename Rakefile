@@ -2,5 +2,5 @@
 
 desc "Create a new article."
 task :sass do
-  `sass --scss --style compact public/css/main.less public/css/main.css`
+  `sass --scss --no-cache --style compact public/css/main.less public/css/main.css`
 end
