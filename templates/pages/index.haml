@@ -8,8 +8,5 @@
 
       %section.post-body
         = article.summary
-        %a{ :href => article.path, :class => 'read-more' } Continue reading…
+        %a{ :href => article.path, :class => 'read-more' } Continue reading&hellip;
 
-- if archives.length > 3
-  %section#archives
-    = archives[3..-1]
