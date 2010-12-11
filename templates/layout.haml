@@ -5,9 +5,21 @@
     %meta{ :'http-equiv' => "Content-Type", :content => "text/html; charset=UTF-8" }
     
     %link{ :rel => 'alternate', :type => 'application/atom+xml', :title => "#{title} Feed", :href => '/index.xml' }
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular' }
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold' }
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Droid+Sans+Mono' }
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular' }
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold' }
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'https://fonts.googleapis.com/css?family=Droid+Sans+Mono' }
+    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/css/main.css' }
+    %script{ :type => 'text/javascript', :src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js' }
+    
+    :javascript
+      $(function() {
+        $('body').css('visibility', 'hidden');
+        var showBody = function() {
+          $('body').css('visibility', 'visible');
+        };
+        $(window).load(showBody);
+        setTimeout(showBody, 2000);
+      });
 
   %body
     %header#nav
@@ -30,6 +42,3 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/css/main.css' }
-
