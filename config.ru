@@ -45,6 +45,7 @@ toto = Toto::Server.new do
   set :disqus,    false
   set :date,      lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :to_html,   lambda {|path, page, ctx| Haml::Engine.new(File.read("#{path}/#{page}.haml"), { :format => :html5, :ugly => true }).render(ctx) }
+  set :cache,     86400
 end
 
 run toto
