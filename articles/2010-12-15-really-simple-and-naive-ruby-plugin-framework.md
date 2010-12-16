@@ -10,7 +10,7 @@ but in order to not violate the
 create a very simple and naive plugin framework that would automagically wire up new
 content-type handlers.
 The way I chose to implement this, was to leverage the meta-programming capabilities in Ruby,
-more specifically the `implemented` hook.~
+more specifically the `inherited` hook.~
 
 ### Say hello to your friendly neighbourhood hooks
 One of the most powerful aspects of Ruby, is its meta-programming capabilities; the aspect that
@@ -32,7 +32,7 @@ undefined methods.
 
 ### Respect the hook
 To implement the plugin framework, I decided to leverage a seemingly under-appreciated hook
-found on `Class` called `implemented`. Yet again, the name gives it all away - this hook is
+found on `Class` called `inherited`. Yet again, the name gives it all away - this hook is
 called whenever the class is implemented (sub-classed.) We can utilise this hook to implement a
 simple plugin registration system packaged up in a module.
 
