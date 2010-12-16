@@ -1,4 +1,4 @@
-title: Really simple and naïve Ruby plugin framework
+title: Really simple and naive Ruby plugin framework
 slug:  really-simple-and-naive-ruby-plugin-framework
 
 
@@ -7,7 +7,7 @@ I recently found myself writing some Ruby (IronRuby to be specific) at work for
 destined to be displayed in an aside column. There are many ways of doing something like this,
 but in order to not violate the
 [Open/Closed Principle](http://en.wikipedia.org/wiki/Open/closed_principle), I decided to
-create a very simple and naïve plugin framework that would automagically wire up new
+create a very simple and naive plugin framework that would automagically wire up new
 content-type handlers.
 The way I chose to implement this, was to leverage the meta-programming capabilities in Ruby,
 more specifically the `implemented` hook.~
