@@ -1,4 +1,4 @@
-#task :default => :new
+task :default => :sass
 
 desc "Create a new article."
 task :sass do
