@@ -6,26 +6,12 @@
     %meta{ :name => 'verify-postrank', :content => '2u5vtik' }
     
     %link{ :rel => 'alternate', :type => 'application/atom+xml', :title => "THOMASJO", :href => 'http://feeds.feedburner.com/thomasjo' }
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular' }
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold' }
-    %link{ :rel => 'stylesheet', :type => 'text/css', :href => 'http://fonts.googleapis.com/css?family=Droid+Sans+Mono' }
     %link{ :rel => 'stylesheet', :type => 'text/css', :href => '/css/main.css' }
-    %script{ :type => 'text/javascript', :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js' }
 
   %body
-    :javascript
-      $('body').css('visibility', 'hidden');
-      $(function() {
-        var showBody = function() {
-          $('body').css('visibility', 'visible');
-        };
-        $(window).load(showBody);
-        setTimeout(showBody, 2000);
-      });
-
     %header#nav
       %h1
-        %a{ :href => '/' }= @config[:title]
+        %a{ :href => '/' }= @config[:author]
 
     %section#content
       = yield
