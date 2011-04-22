@@ -7,7 +7,7 @@ of the former would never have been possible without the latter; what makes Rail
 and Ruby would almost certainly still be an obscure and under-appreciated language had it not
 been for Rails. Ruby is a remarkably beautiful language, and I love working with it.~
 
-### Freedom to hang ourselves
+## Freedom to hang ourselves
 To me, and infinitely more prominent people like David Heinemeier Hansson, Ruby is very much about
 [freedom](http://tekpub.com/conferences/rubyconf2010/dhh). Freedom to shape the language to suit
 our purpose and fulfil our needs.
@@ -34,7 +34,7 @@ works, that you probably shouldn't do, but should the language really prevent yo
 or should you learn on your own? Personally, I'm all for the latter -- learning through
 experience.
 
-### It's also about the people
+## It's also about the people
 The freedom Ruby provides me with, is the biggest reason I love it as much as I do, but Ruby
 also has a fantastic community. A community that continues to innovate and develop fantastic
 services such as [Heroku](http://heroku.com/), and projects such as

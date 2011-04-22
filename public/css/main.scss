@@ -41,24 +41,20 @@ header#nav {
 
   h1 {
     display: inline-block;
-    padding: 5px 13px;
+    padding: 10px 13px;
     background: $theme-color;
     font-family: $header-font;
     font-size: 21px;
+    line-height: 1;
     color: #FFF;
 
-    a:after {
+    &:after {
       content: ".";
     }
+  }
 
-    &, a:link, a:active, a:visited {
-      color: #FFF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #000;
-    }
+  a:hover h1 {
+    background: $theme-alternate-color;
   }
 }
 
@@ -66,7 +62,7 @@ header#nav {
   header {
     margin-bottom: 10px;
 
-    h2 {
+    h1 {
       font-size: 34px;
       line-height: 1.2;
 
@@ -120,7 +116,7 @@ header#nav {
     text-align: left;
   }
 
-  h3 {
+  h2 {
     margin: 10px 0;
     font-size: 21px;
     color: #555;

@@ -12,7 +12,7 @@ content-type handlers.
 The way I chose to implement this, was to leverage the meta-programming capabilities in Ruby,
 more specifically the `inherited` hook.~
 
-### Say hello to your friendly neighbourhood hooks
+## Say hello to your friendly neighbourhood hooks
 One of the most powerful aspects of Ruby, is its meta-programming capabilities; the aspect that
 allows you to shape the language to fit your needs and requirements - at runtime.
 
@@ -30,7 +30,7 @@ undefined methods.
     hello = Hello.new
     puts hello.neighbour  # "Hello Neighbour!"
 
-### Respect the hook
+## Respect the hook
 To implement the plugin framework, I decided to leverage a seemingly under-appreciated hook
 found on `Class` called `inherited`. Yet again, the name gives it all away - this hook is
 called whenever the class is implemented (sub-classed.) We can utilise this hook to implement a
@@ -56,7 +56,7 @@ Because we want to add singleton methods to whatever class includes our plugin m
 a common, albeit slightly controversial technique; leverage another hook - `#included` - to
 automagically extend the target class with the our `ClassMethods` modules.
 
-### Let's build some plugins!
+## Let's build some plugins!
 With the `Plugin` module we have the foundation needed to implement various types of plugins;
 let's create a very silly plugin type for displaying various kinds of messages.
 
@@ -96,7 +96,7 @@ a directory called "plugins."
 Now all that is required for someone to add a new message to our application, is to inherit
 from `MessagePlugin` and drop the implementation into the "plugins" folder.
 
-### Taking it one step further...
+## Taking it one step further...
 The `MessagePlugin` is extremely simple - what if we want to pass data to a plugin? Perhaps we
 only want to pass the data to plugins that can handle that type of data. An easy way
 of pulling this off, is to query the registered plugins on whether they can handle it.
@@ -138,7 +138,7 @@ The `#can_handle?(type)` predicate method hands the responsibility over to the p
 requiring no changes to any other class whenever we add a new type and/or type handler to the
 application. The Open/Closed Principle remains unviolated.
 
-### One more thing...
+## One more thing...
 Just for good measure, here is a rather silly test harness for running the various plugins
 we've peeked at - enjoy responsibly!
 

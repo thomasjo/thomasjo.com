@@ -10,7 +10,7 @@ To my great joy, I discovered that the .NET framework has supported XMLDSIG for 
 I quickly got into problems and all of the documentation I found online, including the
 official MSDN documentation covering the XMLDSIG support was either lacking or incorrect.~
 
-### What is XMLDSIG?
+## What is XMLDSIG?
 Before I get to the code, and the problems I encountered, I'll briefly explain the concept
 of XMLDSIG; [XMLDSIG is an old standard](http://www.w3.org/Signature/Drafts/WD-xmldsig-core-20000114/)
 in Internet years, and is seemingly accepted as the best and easiest way of digitally
@@ -30,7 +30,7 @@ to the document prior to signing, and only the right combinations provide valid 
 and that is one of the problems I encountered with the
 [problematic MSDN documentation](http://msdn.microsoft.com/en-us/library/system.security.cryptography.xml.signedxml.aspx).
 
-### Enveloping != Enveloped
+## Enveloping != Enveloped
 The problem with the MSDN documentation, and virtually every other example of doing
 XMLDSIG in .NET, is that they are only based around the "enveloped signature" variant,
 even when they tell you they are showing you an example of the "enveloping signature"
@@ -155,7 +155,7 @@ another problem I encountered; the inability to reference the object elements by
 as the default behavior when using the enveloped variant is to look for elements matching
 the URI ID within the document being signed, instead of within the signature.
 
-### But what if I want to use the "enveloped signature" variant?
+## But what if I want to use the "enveloped signature" variant?
 If you don't want the variant I needed (enveloping), then changing the code sample above
 to produce signatures of the enveloped kind, is trivial; first make sure to remove the
 following two lines:
