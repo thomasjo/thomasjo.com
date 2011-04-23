@@ -1,6 +1,6 @@
 task :default => :sass
 
-desc "Create a new article."
+desc "Convert the primary stylesheet from Sass CSS format to standard CSS."
 task :sass do
-  `sass --scss --no-cache --style compact public/css/main.scss public/css/main.css`
+  `sass --scss --no-cache --style compressed public/css/main.scss public/css/main.css`
 end
