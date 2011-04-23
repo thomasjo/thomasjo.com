@@ -1,12 +1,8 @@
-/* ------------------------------ *
- * Reset Reloaded (by Eric Meyer) *
- * ------------------------------ */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline}body{line-height:1;color:black;background:white}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{text-align:left;font-weight:normal}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:""""}
+@import "reset";
 
-
-$theme-color: #E40;
-$theme-alternate-color: $theme-color - #333;
-$unimportant-color: #777;
+$theme-color: #D41;
+$theme-alternate-color: #333;
+$unimportant-color: #888;
 $link-color: #06C;
 $link-visited-color: #96C;
 
@@ -21,10 +17,11 @@ body {
   width: 778px;
   margin: 0 auto;
   padding: 15px 40px;
+  overflow-y: scroll;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.75;
-  color: #111;
+  color: #444;
 }
 
 section, header, article, footer {
@@ -47,14 +44,22 @@ header#nav {
     font-size: 21px;
     line-height: 1;
     color: #FFF;
+    -webkit-transition: background-color 0.33s linear;
+    -moz-transition: background-color 0.33s linear;
+    -o-transition: background-color 0.33s linear;
+    transition: background-color 0.33s linear;
 
     &:after {
       content: ".";
     }
   }
 
-  a:hover h1 {
-    background: $theme-alternate-color;
+  a {
+    text-decoration: none;
+
+    &:hover h1 {
+      background: $theme-alternate-color;
+    }
   }
 }
 
@@ -66,9 +71,13 @@ header#nav {
       font-size: 34px;
       line-height: 1.2;
 
-      a, a:link, a:active, a:visited {
+      a, a:active, a:visited {
         color: $theme-color;
         text-decoration: none;
+        -webkit-transition: color 0.33s linear;
+        -moz-transition: color 0.33s linear;
+        -o-transition: color 0.33s linear;
+        transition: color 0.33s linear;
       }
 
       a:hover {
@@ -113,13 +122,12 @@ header#nav {
 
   a.read-more {
     display: block;
-    text-align: left;
+    color: $link-color;
   }
 
   h2 {
     margin: 10px 0;
     font-size: 21px;
-    color: #555;
   }
 
   p {
@@ -130,7 +138,7 @@ header#nav {
   pre, code {
     font-family: Courier, monospace, serif;
     font-size: 1em;
-    color: #459;
+    color: #A52;
   }
 
   pre {
