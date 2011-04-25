@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     builder (3.0.0)
-    haml (3.0.25)
+    haml (3.1.0)
     rack (1.2.2)
     rack-rewrite (1.0.2)
     rdiscount (1.6.8)
