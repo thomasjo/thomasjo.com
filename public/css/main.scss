@@ -74,10 +74,6 @@ header#nav {
       a, a:active, a:visited {
         color: $theme-color;
         text-decoration: none;
-        -webkit-transition: color 0.33s linear;
-        -moz-transition: color 0.33s linear;
-        -o-transition: color 0.33s linear;
-        transition: color 0.33s linear;
       }
 
       a:hover {
@@ -110,52 +106,74 @@ header#nav {
       margin-top: 40px;
       line-height: 1;
     }
-  }
 
-  a {
-    color: $link-color;
-  }
+    .post-body {
+      a {
+        border-bottom: 1px dotted $link-color;
+        color: $link-color;
+        text-decoration: none;
 
-  a:visited {
-    color: $link-visited-color;
-  }
+        &:visited {
+          border-bottom-color: $link-visited-color;
+          color: $link-visited-color;
+        }
 
-  a.read-more {
-    display: block;
-    color: $link-color;
-  }
+        &:hover {
+          border-bottom-color: $link-color + #222;
+          color: $link-color + #222;
+        }
 
-  h2 {
-    margin: 10px 0;
-    font-size: 21px;
-  }
+        &:visited:hover {
+          border-bottom-color: $link-visited-color + #222;
+          color: $link-visited-color + #222;
+        }
+      }
 
-  p {
-    margin: 10px 0;
-    text-align: justify;
-  }
+      a.read-more {
+        &:visited {
+          border-bottom-color: $link-color;
+          color: $link-color;
+        }
 
-  pre, code {
-    font-family: Courier, monospace, serif;
-    font-size: 1em;
-    color: #A52;
-  }
+        &:hover {
+          border-bottom-color: $link-color + #222;
+          color: $link-color + #222;
+        }
+      }
 
-  pre {
-    margin: 20px 0;
-    line-height: 1.5;
-  }
+      h2 {
+        margin: 10px 0;
+        font-size: 21px;
+      }
 
-  ol, ul {
-    margin: 10px 0;
-  }
+      p {
+        margin: 10px 0;
+        text-align: justify;
+      }
 
-  ol {
-    list-style-type: decimal-leading-zero;
-  }
+      pre, code {
+        font-family: Courier, monospace, serif;
+        font-size: 1em;
+        color: #A52;
+      }
 
-  ul {
-    list-style-type: circle;
+      pre {
+        margin: 20px 0;
+        line-height: 1.5;
+      }
+
+      ol, ul {
+        margin: 10px 0;
+      }
+
+      ol {
+        list-style-type: decimal-leading-zero;
+      }
+
+      ul {
+        list-style-type: circle;
+      }
+    }
   }
 }
 
